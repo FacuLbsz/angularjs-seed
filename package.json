@@ -1,0 +1,27 @@
+{
+  "name": "angularjs-seed",
+  "version": "1.0.0",
+  "description": "A seed project with AngularJS to clone it and start developing properly.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-prod": "NODE_ENV=production webpack --config webpack.config.js",
+    "build-dev": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FacuLbsz/angularjs-seed.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FacuLbsz/angularjs-seed/issues"
+  },
+  "homepage": "https://github.com/FacuLbsz/angularjs-seed#readme",
+  "devDependencies": {
+    "angular": "^1.6.4",
+    "angular-ui-router": "^1.0.3",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
+  }
+}

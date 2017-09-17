@@ -1,6 +1,6 @@
 var webpack = require('webpack');
 
-var PROD = JSON.parse(process.env.PROD_ENV || '0');
+var PROD = process.env.NODE_ENV || '0';
 
 module.exports = {
     context: __dirname + "/app",
@@ -10,7 +10,7 @@ module.exports = {
     },
     output: {
         path: __dirname + '/js',
-        filename: PROD ? 'app.min.js' : 'app.js'        
+        filename: PROD ? 'app.min.js' : 'app.js'
     },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin(/* chunkName= */ { name: "vendor", /* filename= */filename: "vendor.bundle.js" }),

@@ -1,7 +1,7 @@
-angular.module("angularjsSeed")
+module.exports = angular.module("angularjsSeed")
     .controller("HomeController", ["$scope", function ($scope) {
 
-        var self = this;
+        var self = this
 
-        self.message = "Hola Mundo";
+        self.message = "Hola Mundo"
     }])

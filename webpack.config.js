@@ -1,19 +1,17 @@
-var webpack = require('webpack');
+var webpack = require("webpack")
 
-var PROD = process.env.NODE_ENV || '0';
+var PROD = process.env.NODE_ENV || false
 
 module.exports = {
     context: __dirname + "/app",
     entry: {
-        app: "./app.module.js",
-        vendor: ['angular']
+        app: "./app.module.js"
     },
     output: {
-        path: __dirname + '/js',
-        filename: PROD ? 'app.min.js' : 'app.js'
+        path: __dirname + "/js",
+        filename: PROD ? "app.min.js" : "app.js"
     },
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin(/* chunkName= */ { name: "vendor", /* filename= */filename: "vendor.bundle.js" }),
         new webpack.optimize.UglifyJsPlugin({
             include: /\.min\.js$/,
             minimize: true
